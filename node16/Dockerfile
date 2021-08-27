@@ -6,3 +6,4 @@ RUN echo "deb https://deb.nodesource.com/node_16.x focal main" | sudo tee /etc/a
 RUN apt-get install -f -y
 RUN apt-get update
 RUN aptitude -y install nodejs npm
+RUN (mkdir -p /.npm | :) && chmod -Rv 777 /.npm
